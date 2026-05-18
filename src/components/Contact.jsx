@@ -1,15 +1,16 @@
 import React from 'react';
 import './Contact.css';
+import { DUBAI_WHATSAPP_NUMBER, getWhatsAppOrderLink } from '../utils/whatsapp';
 
 const contacts = [
-  { label: 'Kenya (Call / WhatsApp)', value: '+254 723 590 884', href: 'https://wa.me/254723590884' },
-  { label: 'Dubai (Call / WhatsApp)', value: '+971 585 590 884', href: 'https://wa.me/971585590884' },
+  { label: 'Kenya (Call / WhatsApp)', value: '+254 723 590 884', href: getWhatsAppOrderLink() },
+  { label: 'Dubai (Call / WhatsApp)', value: '+971 585 590 884', href: getWhatsAppOrderLink(undefined, DUBAI_WHATSAPP_NUMBER) },
   { label: 'Dubai (Robert)', value: '+971 556 150 206', href: 'tel:+971556150206' },
 ];
 
 const social = [
   { label: 'Facebook', handle: 'tuchas.autoparts', href: 'https://www.facebook.com/tuchas.autoparts' },
-  { label: 'Instagram', handle: '@tuchas_autoparts', href: 'https://instagram.com/tuchas_autoparts' },
+  { label: 'Instagram', handle: '@_tuchas_autospares', href: 'https://instagram.com/_tuchas_autospares' },
   { label: 'Email', handle: 'tuchas_autoparts@outlook.com', href: 'mailto:tuchas_autoparts@outlook.com' },
 ];
 
@@ -28,7 +29,7 @@ export default function Contact() {
             </h2>
           </div>
           <a
-            href="https://wa.me/254723590884"
+            href={getWhatsAppOrderLink()}
             className="btn btn-primary cta-btn"
             target="_blank"
             rel="noreferrer"
@@ -66,12 +67,11 @@ export default function Contact() {
           <div className="contact-col payments-col">
             <p className="col-label">Payments Accepted</p>
             <div className="payment-tags">
-              <span className="pay-tag">M-Pesa</span>
               <span className="pay-tag">Bank Transfer</span>
-              <span className="pay-tag">Cash</span>
+              <span className="pay-tag">Paybill</span>
             </div>
             <p className="pay-note">
-              Kenyan customers can pay via M-Pesa (Lipa Na M-Pesa). UAE payments via bank transfer or cash.
+              Kenyan customers can pay via bank transfer or Paybill.
             </p>
           </div>
         </div>

@@ -14,8 +14,8 @@ const reasons = [
   },
   {
     icon: '◆',
-    title: 'M-Pesa Payments',
-    desc: 'Simple and familiar payment through M-Pesa. No complicated bank wires for Kenyan customers.',
+    title: 'Bank Transfer & Paybill',
+    desc: 'Simple payment options through bank transfer or Paybill for Kenyan customers.',
   },
   {
     icon: '◇',

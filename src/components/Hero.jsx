@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import { getWhatsAppOrderLink } from '../utils/whatsapp';
 
 export default function Hero() {
   return (
@@ -29,7 +30,7 @@ export default function Hero() {
 
           <div className="hero-actions anim-fade-up d4">
             <a
-              href="https://wa.me/254723590884"
+              href={getWhatsAppOrderLink()}
               className="btn btn-primary"
               target="_blank"
               rel="noreferrer"

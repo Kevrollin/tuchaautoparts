@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import { getWhatsAppOrderLink } from '../utils/whatsapp';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +36,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="https://wa.me/254723590884" className="nav-cta" target="_blank" rel="noreferrer">
+          <a href={getWhatsAppOrderLink()} className="nav-cta" target="_blank" rel="noreferrer">
             Order Now
           </a>
         </nav>

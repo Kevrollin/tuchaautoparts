@@ -1,5 +1,6 @@
 import React from 'react';
 import './HowItWorks.css';
+import { getWhatsAppOrderLink } from '../utils/whatsapp';
 
 const steps = [
   {
@@ -17,7 +18,7 @@ const steps = [
   {
     num: '3',
     title: 'Pay & Confirm',
-    desc: 'Make payment via M-Pesa or bank transfer. We confirm your order and begin the shipping process.',
+    desc: 'Make payment via bank transfer or Paybill. We confirm your order and begin the shipping process.',
     cta: null,
   },
   {
@@ -44,7 +45,7 @@ export default function HowItWorks() {
               From your WhatsApp message to your garage door — we handle everything in between.
             </p>
             <a
-              href="https://wa.me/254723590884"
+              href={getWhatsAppOrderLink()}
               className="btn btn-primary how-cta"
               target="_blank"
               rel="noreferrer"
