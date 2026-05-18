@@ -1,0 +1,170 @@
+.parts {
+  background: var(--black);
+}
+
+.section-gap {
+  padding-block: var(--section-gap);
+}
+
+/* ── Section header ── */
+.section-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  max-width: 640px;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+  color: var(--white);
+}
+
+.section-title .font-serif {
+  font-family: var(--font-serif);
+}
+
+.section-title .italic { font-style: italic; }
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* ── Parts grid ── */
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 3.5rem;
+}
+
+.part-card {
+  background: var(--off-black);
+  padding: 2rem 1.75rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.part-card:hover {
+  background: var(--charcoal);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.card-tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--accent);
+  padding: 0.2rem 0.5rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-list li {
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list-dash {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Brands row ── */
+.brands-row {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.brands-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex-shrink: 0;
+  padding-top: 0.35rem;
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.brand-pill {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--light);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.brand-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.brand-more {
+  border-style: dashed;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .parts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .parts-grid { grid-template-columns: 1fr; }
+}

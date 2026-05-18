@@ -1,0 +1,48 @@
+.app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Floating WhatsApp CTA ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--accent);
+  color: var(--black);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float span { display: none; }
+  .whatsapp-float {
+    width: 3.25rem;
+    height: 3.25rem;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+}
