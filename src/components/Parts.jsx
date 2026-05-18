@@ -1,5 +1,7 @@
 import React from 'react';
 import './Parts.css';
+import { openWhatsApp } from '../utils/whatsapp';
+import { trackEvent } from '../utils/analytics';
 
 const categories = [
   {
@@ -43,6 +45,11 @@ const categories = [
 const brands = ['Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'Range Rover', 'Toyota', 'Jeep', 'Chrysler', 'Mitsubishi', 'Lexus'];
 
 export default function Parts() {
+  const requestCategory = (title) => {
+    trackEvent('product_click', { category: title, source: 'parts_section' });
+    openWhatsApp(`Hi Tuchas Auto Spares, I want to order ${title} parts.\nCar make/model/year:\nLocation:`);
+  };
+
   return (
     <section className="parts section-gap" id="parts">
       <div className="container">
@@ -71,6 +78,9 @@ export default function Parts() {
                   <li key={item}><span className="list-dash">—</span> {item}</li>
                 ))}
               </ul>
+              <button className="part-cta" onClick={() => requestCategory(cat.title)}>
+                Request {cat.title}
+              </button>
             </article>
           ))}
         </div>

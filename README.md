@@ -25,6 +25,33 @@ npm run build
 
 Output is in the `build/` folder.
 
+## SEO + Analytics Setup
+
+### Search Console / Bing Verification
+
+Update tokens in `public/index.html`:
+
+- `google-site-verification`
+- `msvalidate.01`
+
+### Google Tag Manager
+
+Update `GTM-XXXXX` in `public/index.html` with your real container ID.
+
+### Event Tracking Implemented
+
+The app currently sends these events to `dataLayer`/`gtag`:
+
+- `page_view`
+- `whatsapp_click`
+- `product_click`
+
+Files:
+
+- `src/utils/analytics.js`
+- `src/utils/whatsapp.js`
+- `src/components/Parts.jsx`
+
 ## Deploy to Vercel
 
 ### Option A — Vercel CLI

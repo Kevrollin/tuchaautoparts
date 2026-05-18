@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Ticker from './components/Ticker';
 import Parts from './components/Parts';
 import HowItWorks from './components/HowItWorks';
 import WhyUs from './components/WhyUs';
+import Blog from './components/Blog';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
+import SEO from './components/SEO';
+import { getWhatsAppOrderLink, openWhatsApp } from './utils/whatsapp';
+import { trackEvent } from './utils/analytics';
 
 export default function App() {
+  useEffect(() => {
+    trackEvent('page_view', { page: '/' });
+  }, []);
+
   return (
     <div className="app">
+      <SEO />
       <Navbar />
       <main>
         <Hero />
@@ -19,13 +29,16 @@ export default function App() {
         <Parts />
         <HowItWorks />
         <WhyUs />
+        <Blog />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
 
       {/* Floating WhatsApp button */}
       <a
-        href="https://wa.me/254723590884"
+        href={getWhatsAppOrderLink()}
+        onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
         className="whatsapp-float"
         target="_blank"
         rel="noreferrer"

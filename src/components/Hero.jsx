@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import { getWhatsAppOrderLink } from '../utils/whatsapp';
+import { getWhatsAppOrderLink, openWhatsApp } from '../utils/whatsapp';
 
 export default function Hero() {
   return (
@@ -34,6 +34,7 @@ export default function Hero() {
               className="btn btn-primary"
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
             >
               Order on WhatsApp
             </a>

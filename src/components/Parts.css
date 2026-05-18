@@ -110,6 +110,25 @@
   gap: 0.5rem;
 }
 
+.part-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.part-cta:hover {
+  background: var(--accent);
+  color: var(--black);
+}
+
 .list-dash {
   color: var(--accent);
   flex-shrink: 0;

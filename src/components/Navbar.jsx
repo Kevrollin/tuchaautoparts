@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { getWhatsAppOrderLink } from '../utils/whatsapp';
+import { getWhatsAppOrderLink, openWhatsApp } from '../utils/whatsapp';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,6 +14,8 @@ export default function Navbar() {
 
   const links = [
     { label: 'Parts', href: '#parts' },
+    { label: 'Blog', href: '#blog' },
+    { label: 'FAQ', href: '#faq' },
     { label: 'How It Works', href: '#how' },
     { label: 'Why Us', href: '#why' },
     { label: 'Contact', href: '#contact' },
@@ -23,10 +25,12 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-inner">
         <a href="/" className="nav-logo">
-          <img 
-            src="/WhatsApp Image 2026-05-13 at 6.56.39 PM.jpeg" 
-            alt="Tucha's Auto Parts Logo"
+          <img
+            src="/tuchas-auto-spares-logo.jpg"
+            alt="Tuchas Auto Spares logo"
             className="logo-image"
+            loading="lazy"
+            decoding="async"
           />
         </a>
 
@@ -36,7 +40,13 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={getWhatsAppOrderLink()} className="nav-cta" target="_blank" rel="noreferrer">
+          <a
+            href={getWhatsAppOrderLink()}
+            className="nav-cta"
+            target="_blank"
+            rel="noreferrer"
+            onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
+          >
             Order Now
           </a>
         </nav>

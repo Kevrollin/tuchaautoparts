@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-05-18",
+  "locale": "en-KE",
+  "primary": [
+    { "keyword": "auto spares Kenya", "intent": "commercial", "priority": "high", "suggestedPage": "/" },
+    { "keyword": "car spare parts Nairobi", "intent": "commercial", "priority": "high", "suggestedPage": "/parts" },
+    { "keyword": "genuine auto parts Kenya", "intent": "commercial", "priority": "high", "suggestedPage": "/parts" }
+  ],
+  "categoryKeywords": [
+    { "keyword": "Toyota spare parts Kenya", "intent": "commercial", "priority": "high", "suggestedPage": "/products/toyota" },
+    { "keyword": "Nissan parts Kenya", "intent": "commercial", "priority": "high", "suggestedPage": "/products/nissan" },
+    { "keyword": "Mercedes spare parts Nairobi", "intent": "commercial", "priority": "medium", "suggestedPage": "/products/mercedes" }
+  ],
+  "longTail": [
+    { "keyword": "where to buy car parts in Nairobi", "intent": "local", "priority": "high", "suggestedPage": "/contact" },
+    { "keyword": "how to identify genuine spare parts Kenya", "intent": "informational", "priority": "medium", "suggestedPage": "/blog/how-to-identify-genuine-parts-kenya" },
+    { "keyword": "affordable car parts Nairobi delivery", "intent": "commercial", "priority": "medium", "suggestedPage": "/" }
+  ],
+  "local": [
+    { "keyword": "auto shop Nairobi", "intent": "local", "priority": "high", "suggestedPage": "/" },
+    { "keyword": "auto spares near me", "intent": "local", "priority": "high", "suggestedPage": "/contact" },
+    { "keyword": "car parts Kenya delivery", "intent": "local", "priority": "high", "suggestedPage": "/" }
+  ],
+  "brand": [
+    { "keyword": "Tuchas Auto Spares", "intent": "brand", "priority": "high", "suggestedPage": "/" },
+    { "keyword": "Tuchas Autoparts Dubai to Kenya", "intent": "brand", "priority": "medium", "suggestedPage": "/" },
+    { "keyword": "Kelvin Mukaria web developer Kenya", "intent": "brand", "priority": "medium", "suggestedPage": "https://kelvinmukaria.vercel.app" }
+  ],
+  "supportingTopics": [
+    "how to fit brake pads",
+    "how to check engine parts",
+    "best auto parts suppliers in kenya",
+    "buy car electronics kenya",
+    "car body parts dubai to kenya"
+  ],
+  "notes": "This keyword file is a professional starting set focused on Kenya. Use Search Console and local keyword tools to validate search volumes and refine priorities. Integrate into content calendar and product page templates."
+}

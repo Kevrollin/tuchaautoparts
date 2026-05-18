@@ -1,6 +1,6 @@
 import React from 'react';
 import './HowItWorks.css';
-import { getWhatsAppOrderLink } from '../utils/whatsapp';
+import { getWhatsAppOrderLink, openWhatsApp } from '../utils/whatsapp';
 
 const steps = [
   {
@@ -49,6 +49,7 @@ export default function HowItWorks() {
               className="btn btn-primary how-cta"
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
             >
               Start an Order
             </a>

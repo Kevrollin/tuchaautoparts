@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tuchasautospares.com/sitemap.xml

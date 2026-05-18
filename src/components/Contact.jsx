@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import { DUBAI_WHATSAPP_NUMBER, getWhatsAppOrderLink } from '../utils/whatsapp';
+import { DUBAI_WHATSAPP_NUMBER, getWhatsAppOrderLink, openWhatsApp } from '../utils/whatsapp';
 
 const contacts = [
   { label: 'Kenya (Call / WhatsApp)', value: '+254 723 590 884', href: getWhatsAppOrderLink() },
@@ -34,6 +34,7 @@ export default function Contact() {
             className="btn btn-primary cta-btn"
             target="_blank"
             rel="noreferrer"
+            onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
           >
             WhatsApp Us Now
           </a>
@@ -45,7 +46,25 @@ export default function Contact() {
             <p className="col-label">Phone / WhatsApp</p>
             <div className="contact-list">
               {contacts.map(c => (
-                <a key={c.value} href={c.href} className="contact-item" target="_blank" rel="noreferrer">
+                <a
+                  key={c.value}
+                  href={c.href}
+                  className="contact-item"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => {
+                    // if it's a whatsapp link, track it
+                    if (c.href && c.href.includes('wa.me')) {
+                      e.preventDefault();
+                      // choose phone if provided
+                      if (c.value && c.value.includes('+971')) {
+                        openWhatsApp(undefined, DUBAI_WHATSAPP_NUMBER);
+                      } else {
+                        openWhatsApp();
+                      }
+                    }
+                  }}
+                >
                   <span className="contact-label">{c.label}</span>
                   <span className="contact-value">{c.value}</span>
                 </a>
@@ -75,6 +94,18 @@ export default function Contact() {
               Kenyan customers can pay via bank transfer or Paybill.
             </p>
           </div>
+        </div>
+        {/* Map embed for Local SEO */}
+        <div className="contact-map" aria-hidden="false">
+          <iframe
+            title="Tuchas Auto Spares location"
+            src="https://www.google.com/maps?q=-1.286389,36.817223&z=15&output=embed"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

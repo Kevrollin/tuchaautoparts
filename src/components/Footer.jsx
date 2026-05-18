@@ -15,6 +15,8 @@ export default function Footer() {
 
         <nav className="footer-nav">
           <a href="#parts">Parts</a>
+          <a href="#blog">Blog</a>
+          <a href="#faq">FAQ</a>
           <a href="#how">How It Works</a>
           <a href="#why">Why Us</a>
           <a href="#contact">Contact</a>
@@ -22,6 +24,9 @@ export default function Footer() {
 
         <div className="footer-copy">
           © {new Date().getFullYear()} Tucha's Autoparts &amp; Outsourcing. All rights reserved.
+          <div className="built-by">
+            Designed &amp; Built by <a href="https://kelvinmukaria.vercel.app" target="_blank" rel="noopener noreferrer">Kelvin Mukaria</a>
+          </div>
         </div>
       </div>
     </footer>

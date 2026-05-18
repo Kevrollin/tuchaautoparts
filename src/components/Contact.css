@@ -47,6 +47,16 @@
   margin-top: 4rem;
 }
 
+.contact-map {
+  margin-top: 2rem;
+  border: 1px solid var(--border);
+  background: var(--off-black);
+}
+
+.contact-map iframe {
+  display: block;
+}
+
 .contact-col {
   background: var(--off-black);
   padding: 2rem 1.75rem 2.5rem;
