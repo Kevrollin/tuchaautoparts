@@ -9,7 +9,8 @@ const contacts = [
 ];
 
 const social = [
-  { label: 'Facebook', handle: 'tuchas.autoparts', href: 'https://www.facebook.com/tuchas.autoparts' },
+  { label: 'Facebook', handle: "Tucha's Auto Spares And Outsourcing", href: 'https://www.facebook.com/tuchas.autoparts' },
+  { label: 'Facebook', handle: "Tucha's Autoparts", href: 'https://www.facebook.com/tuchas.autoparts' },
   { label: 'Instagram', handle: '@_tuchas_autospares', href: 'https://instagram.com/_tuchas_autospares' },
   { label: 'Email', handle: 'tuchas_autoparts@outlook.com', href: 'mailto:tuchas_autoparts@outlook.com' },
 ];
