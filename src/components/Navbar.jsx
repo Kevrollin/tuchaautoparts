@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-inner">
-        <a href="#" className="nav-logo">
+        <a href="/" className="nav-logo">
           <img 
             src="/WhatsApp Image 2026-05-13 at 6.56.39 PM.jpeg" 
             alt="Tucha's Auto Parts Logo"
