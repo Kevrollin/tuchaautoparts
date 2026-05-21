@@ -8,6 +8,12 @@
     <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_TOKEN" />
     <!-- Bing Webmaster verification (replace token) -->
     <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_TOKEN" />
+    <!-- Enforce canonical domain (non-www) -->
+    <script>
+      if (window.location.hostname === 'www.tuchasautospares.com') {
+        window.location.replace('https://tuchasautospares.com' + window.location.pathname + window.location.search);
+      }
+    </script>
     <meta name="description" content="Tuchas Auto Spares offers quality genuine car spare parts in Kenya at affordable prices. Fast delivery, trusted automotive solutions, and professional customer support." />
     <meta name="keywords" content="auto spares Kenya, car spare parts Nairobi, genuine spare parts, Toyota parts Kenya, Nissan parts Kenya, automotive shop Kenya, Tuchas Auto Spares" />
     <meta name="author" content="Kelvin Mukaria" />
