@@ -26,9 +26,9 @@ export default function SEO({
   title = 'Tuchas Auto Spares | Genuine Auto Parts in Kenya',
   description = 'Tuchas Auto Spares offers quality genuine car spare parts in Kenya at affordable prices. Fast delivery, trusted automotive solutions, and professional customer support.',
   keywords = 'auto spares Kenya, car spare parts Nairobi, genuine spare parts, Toyota parts Kenya, Nissan parts Kenya, automotive shop Kenya, Tuchas Auto Spares',
-  canonical = 'https://tuchasautospares.com/',
+  canonical = 'https://www.tuchasautospares.com/',
   ogImage = '/og-image.jpg',
-  url = 'https://tuchasautospares.com/',
+  url = 'https://www.tuchasautospares.com/',
   jsonLd = null,
 }) {
   useEffect(() => {
@@ -56,8 +56,8 @@ export default function SEO({
       '@context': 'https://schema.org',
       '@type': 'AutoPartsStore',
       name: "Tuchas Auto Spares",
-      url: 'https://tuchasautospares.com',
-      logo: 'https://tuchasautospares.com/logo.png',
+      url: 'https://www.tuchasautospares.com',
+      logo: 'https://www.tuchasautospares.com/logo.png',
       sameAs: [
         'https://facebook.com/tuchas.autoparts',
         'https://instagram.com/_tuchas_autospares',
@@ -106,10 +106,10 @@ export default function SEO({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Tuchas Auto Spares',
-      url: 'https://tuchasautospares.com',
+      url: 'https://www.tuchasautospares.com',
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://tuchasautospares.com/?s={search_term_string}',
+        target: 'https://www.tuchasautospares.com/?s={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
     };
@@ -131,13 +131,13 @@ export default function SEO({
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://tuchasautospares.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Parts', item: 'https://tuchasautospares.com/#parts' },
-        { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://tuchasautospares.com/#blog' },
-        { '@type': 'ListItem', position: 4, name: 'How It Works', item: 'https://tuchasautospares.com/#how' },
-        { '@type': 'ListItem', position: 5, name: 'Why Us', item: 'https://tuchasautospares.com/#why' },
-        { '@type': 'ListItem', position: 6, name: 'FAQ', item: 'https://tuchasautospares.com/#faq' },
-        { '@type': 'ListItem', position: 7, name: 'Contact', item: 'https://tuchasautospares.com/#contact' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.tuchasautospares.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Parts', item: 'https://www.tuchasautospares.com/#parts' },
+        { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://www.tuchasautospares.com/#blog' },
+        { '@type': 'ListItem', position: 4, name: 'How It Works', item: 'https://www.tuchasautospares.com/#how' },
+        { '@type': 'ListItem', position: 5, name: 'Why Us', item: 'https://www.tuchasautospares.com/#why' },
+        { '@type': 'ListItem', position: 6, name: 'FAQ', item: 'https://www.tuchasautospares.com/#faq' },
+        { '@type': 'ListItem', position: 7, name: 'Contact', item: 'https://www.tuchasautospares.com/#contact' },
       ],
     };
 
@@ -164,9 +164,9 @@ export default function SEO({
       '@type': 'ItemList',
       name: 'Parts Categories',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Engine & Drivetrain', url: 'https://tuchasautospares.com/#parts' },
-        { '@type': 'ListItem', position: 2, name: 'Body & Exterior', url: 'https://tuchasautospares.com/#parts' },
-        { '@type': 'ListItem', position: 3, name: 'Lights & Optics', url: 'https://tuchasautospares.com/#parts' },
+        { '@type': 'ListItem', position: 1, name: 'Engine & Drivetrain', url: 'https://www.tuchasautospares.com/#parts' },
+        { '@type': 'ListItem', position: 2, name: 'Body & Exterior', url: 'https://www.tuchasautospares.com/#parts' },
+        { '@type': 'ListItem', position: 3, name: 'Lights & Optics', url: 'https://www.tuchasautospares.com/#parts' },
       ],
     };
 
